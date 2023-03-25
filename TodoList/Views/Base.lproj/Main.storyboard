@@ -29,16 +29,16 @@
             </objects>
             <point key="canvasLocation" x="-1259" y="-56"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Category List-->
         <scene sceneID="3kh-f9-nFb">
             <objects>
-                <tableViewController id="e65-QQ-pfE" sceneMemberID="viewController">
+                <tableViewController id="e65-QQ-pfE" customClass="CategoryViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BlX-WD-A4L">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HUj-3r-nzd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HUj-3r-nzd" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HUj-3r-nzd" id="wWy-xD-cca">
@@ -52,7 +52,14 @@
                             <outlet property="delegate" destination="e65-QQ-pfE" id="JYd-EJ-N51"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8rc-bK-wA8"/>
+                    <navigationItem key="navigationItem" title="Category List" id="8rc-bK-wA8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vSP-MR-2LB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addNewCategoryPressed:" destination="e65-QQ-pfE" id="phJ-r0-7yw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="CkA-sE-ZT8" kind="show" identifier="goToItems" id="dF2-n4-oqT"/>
                     </connections>
@@ -61,16 +68,16 @@
             </objects>
             <point key="canvasLocation" x="-244" y="-56"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Todo List View Controller-->
         <scene sceneID="K58-qg-bmg">
             <objects>
-                <tableViewController id="CkA-sE-ZT8" sceneMemberID="viewController">
+                <tableViewController id="CkA-sE-ZT8" customClass="TodoListViewController" customModule="TodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aRw-kJ-5KD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="GON-bt-aLC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="GON-bt-aLC" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GON-bt-aLC" id="5MP-L0-5dL">
@@ -84,7 +91,14 @@
                             <outlet property="delegate" destination="CkA-sE-ZT8" id="XFg-Tx-fLb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="B2J-r2-O7E"/>
+                    <navigationItem key="navigationItem" id="B2J-r2-O7E">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ml7-G1-dMX">
+                            <color key="tintColor" red="0.87470620870000004" green="0.92957359549999996" blue="0.90195751189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="addItemButtonPressed:" destination="CkA-sE-ZT8" id="wQX-XI-Fvu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIJ-fz-Hk9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -69,8 +69,7 @@ class CategoryViewController: SwipeTableViewController {
     
     // MARK: - Add New Categories
     
-    
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func addNewCategoryPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
@@ -89,7 +88,6 @@ class CategoryViewController: SwipeTableViewController {
         present(alert, animated: true)
     }
     
-
     
     
     // MARK: - TableView Delegates Methods
