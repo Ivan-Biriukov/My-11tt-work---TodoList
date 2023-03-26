@@ -11,8 +11,8 @@
         <scene sceneID="h0a-o8-mk8">
             <objects>
                 <navigationController id="RHh-iH-RRi" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="01z-Pa-QN4">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="01z-Pa-QN4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <color key="tintColor" systemColor="labelColor"/>
@@ -54,7 +54,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Category List" id="8rc-bK-wA8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vSP-MR-2LB">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addNewCategoryPressed:" destination="e65-QQ-pfE" id="phJ-r0-7yw"/>
                             </connections>
@@ -93,7 +92,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="B2J-r2-O7E">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ml7-G1-dMX">
-                            <color key="tintColor" red="0.87470620870000004" green="0.92957359549999996" blue="0.90195751189999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="addItemButtonPressed:" destination="CkA-sE-ZT8" id="wQX-XI-Fvu"/>
                             </connections>
